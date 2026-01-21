@@ -1,1 +1,75 @@
 /*  your css code here. If applicable */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Outer 3 circles */
+#outer {
+  width: 300px;
+  height: 300px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Middle 2 circles */
+#middle {
+  width: 250px;
+  height: 250px;
+  background-color: #ffa500;
+  border-radius: 50%;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Inner circle + remaining layers */
+#inner {
+  width: 200px;
+  height: 200px;
+  background-color: #ffff00;
+  border-radius: 50%;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Green circle */
+#inner::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: #008000;
+  border-radius: 50%;
+  margin: auto;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Blue circle */
+#inner::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  border-radius: 50%;
+  margin: auto;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Purple circle */
+#inner::after::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #800080;
+  border-radius: 50%;
+  margin: auto;
+}
